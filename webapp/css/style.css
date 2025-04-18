@@ -1,0 +1,157 @@
+/* Enter your custom styles here */
+
+.IconTabBar{
+    width: 150%;
+}
+.customToolHeader{
+    padding: 4rem;
+    border-radius: 12px;
+}
+.sideContainer{
+    margin-left: 30px;
+}
+.QuickTitle{
+    margin-left: 40px;
+    font-size: x-large;
+}
+.OrgText{
+    margin-top: 35px;
+    margin-left: 40px;
+    font-size: x-large; 
+}
+.EmployeeService{
+    margin-top: 20px;
+    margin-left: 43px;
+}
+.serviceHeader{
+    width: 40px;
+}
+
+.image{
+    width: 95%;
+    height: 20rem;
+    margin-left: 30px;
+}
+.overlayText{
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fcfbfb; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-110%);  
+}
+.typewriter-animation {
+    animation: 
+    typewriter 5s steps(50) infinite alternate, 
+      blinkingCursor 500ms steps(50) infinite normal;
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blinkingCursor{
+    from { border-right-color: rgba(255,255,255,.75); }
+    to { border-right-color: transparent; }
+  }
+  
+.clockText{
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #0c0c0b; 
+    text-align: start; 
+    padding: 5px 15px; 
+    border-radius: 8px; 
+    display: inline-block; 
+    margin-top: 10px; 
+    margin-left: 30px;
+}
+
+.innerTile{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.tile1{
+    margin-left: 35px;
+}
+.ClockMyTime{
+   
+    margin-left: 35px;
+}
+
+.Workflows{
+   
+    margin-left: 35px;
+}
+
+.TimeOff{
+   
+    margin-left: 35px;
+}
+.PayStatement{
+   
+    margin-left: 35px;
+}
+.ViewProfile{
+   
+    margin-left: 35px;
+}
+.ViewLearning{
+    
+    margin-left: 35px;
+}
+.ViewOrg{
+    
+    margin-left: 35px;
+}
+.ViewLeaves{
+    
+    margin-left: 35px;
+}
+.ViewReport{
+   
+    margin-left: 35px;
+}
+.ViewReportCenter{
+    
+    margin-left: 35px;
+}
+.ViewDocument{
+    
+    margin-left: 35px;
+}
+.LearningAdministration{
+    
+    margin-left: 35px;
+}
+
+.ComboBox {
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+/* Time Tracking Style */
+
+.TimeLayout{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.label{
+    font-weight: bold;
+}
+.formDataBtn{
+    margin-left: 30px;
+}
+.timeEntryTitle{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.timeEntryTable{
+    margin-left: 30px;
+}
+
+

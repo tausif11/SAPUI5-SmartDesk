@@ -1,0 +1,54 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:odata="sap.ui.comp.odata"
+    xmlns="sap.uxap"
+    xmlns:vbm="sap.ui.vbm"
+    xmlns:table="sap.ui.table"
+    xmlns:layout="sap.ui.layout"
+    xmlns:cards="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns:tnt="sap.tnt" 
+    controllerName="northwindui5.northwindui.controller.TimeTracking"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m">
+    
+    <m:Page title="Time Tracking" titleAlignment="Center">
+        
+        <m:content>
+           
+            <layout:VerticalLayout class="TimeLayout" busyIndicatorSize="Large">
+                <m:Label text="Select Date" class="label"/>
+                <m:DatePicker id="dpDate" value="{/TimeTracking/date}" width="100%"/>
+
+                <m:Label text="Start Time" class="label"/>
+                <m:TimePicker id="tpStartTime" value="{/TimeTracking/startTime}" width="100%"/>
+
+                <m:Label text="End Time" class="label"/>
+                <m:TimePicker id="tpEndTime" value="{/TimeTracking/endTime}" width="100%"/>
+
+                <m:Label text="Project/Task" class="label"/>
+                <m:Input id="inputTask" value="{/TimeTracking/task}" width="100%"/>
+
+                <m:Label text="Description" class="label"/>
+                <m:TextArea id="textareaDescription" value="{/TimeTracking/description}" width="100%" rows="3"/>
+            </layout:VerticalLayout>
+
+            <m:HBox class="formDataBtn">
+                <m:Button text="Submit" press="onSubmit" type="Emphasized"  />
+                <m:Button text="Cancel" press="onCancel" type="Reject" />
+            </m:HBox>
+
+            <m:Title level="H2" text="Previous Entries" class="timeEntryTitle"/>
+            <table:Table id="timeEntryTable" width="100%" class="timeEntryTable">
+                <table:columns>
+                    <table:Column label="Date"/>
+                    <table:Column label="Task" />
+                    <table:Column label="Start Time" />
+                    <table:Column label="End Time" />
+                    <table:Column label="Duration" />
+                </table:columns>
+            </table:Table>
+
+        </m:content>
+        
+    </m:Page>
+
+</mvc:View>

@@ -1,0 +1,28 @@
+<ActionSheet id="actionSheet"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	core:require="{ MessageToast: 'sap/m/MessageToast' }"
+	title="Choose Your Action"
+	showCancelButton="true"
+	placement="Bottom">
+	<Button
+        id="btn1"
+		text="View Profile"
+		icon="sap-icon://business-card"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+        id="btn2"
+		text="Setting"
+		icon="sap-icon://action-settings"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+        id="btn3"
+		text="Contact Us"
+		icon="sap-icon://contacts"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+        id="btn4"
+		text="About"
+		icon="sap-icon://hint"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+</ActionSheet>
