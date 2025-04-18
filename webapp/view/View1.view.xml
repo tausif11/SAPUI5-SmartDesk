@@ -8,7 +8,7 @@
 	xmlns:tnt="sap.tnt" controllerName="northwindui5.northwindui.controller.View1"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:m="sap.m">
-	<m:Page id="page" title="{i18n>title}" titleAlignment="Center" class="HomePage">
+	<!-- <m:Page id="page" title="{i18n>title}" titleAlignment="Center" class="HomePage"> -->
 		<m:ScrollContainer id="menuBar" vertical="true" height="100%">
 
 
@@ -25,10 +25,10 @@
 					</m:layoutData>
 				</m:Image>
 				<m:ComboBox id="ComboBox" 
-				            items="{/Products}"
+				            items="{/oComboBox}"
 							loadItems="handleLoadItems" 
 							class="ComboBox">
-				  <core:Item id="items" text="{ProductName}"/>
+				  <core:Item id="items" class="ComboBoxText" text="{Name}"/>
 			   </m:ComboBox>
 				<m:ToolbarSpacer id="spacer">
 					<m:layoutData>
@@ -80,7 +80,7 @@
 				      <m:GenericTile id="ClockMyTime" 
 					                 press="onTimeTracking"
 					                 class="ClockMyTime"
-									 header="Clock My Time"
+									 header="Time Tracking"
 									 headerImage="sap-icon://create-entry-time">
 							<m:TileContent id="ClockMyTimeFooter" footer="Time Tracking">
 							   <m:layoutData>
@@ -91,7 +91,8 @@
 					  </m:GenericTile>
 				      <m:GenericTile id="Workflows" 
 					                 class="Workflows"
-									 header="Delegate My Workflows"
+									 press="onWorkflows"
+									 header="Workflows"
 									 headerImage="sap-icon://workflow-tasks">
 							<m:TileContent id="WorkflowsFooter" footer="Workflows">
 							<m:layoutData>
@@ -100,7 +101,7 @@
 							   <m:Text id="WorkflowsText" text="Worklfows Details"/>
 							</m:TileContent>
 					  </m:GenericTile>
-					  <m:GenericTile id="TimeOff" 
+					  <!-- <m:GenericTile id="TimeOff" 
 					                 class="TimeOff"
 									 header="Request Time Off"
 									 headerImage="sap-icon://time-off">
@@ -110,9 +111,10 @@
 									</m:layoutData>
 									<m:Text id="TimeOffText" text="Time Off Details"/>
 							</m:TileContent>	 
-					  </m:GenericTile >
+					  </m:GenericTile > -->
 					  <m:GenericTile id="PayStatement" 
 					                 class="PayStatement"
+									 press="onPayStatement"
 									 header="View Pay Statement"
 									 headerImage="sap-icon://currency">
 							<m:TileContent id="PayStatementFooter" footer="Pay Statement">
@@ -124,6 +126,7 @@
 					  </m:GenericTile>
 					  <m:GenericTile id="ViewProfile" 
 					                 class="ViewProfile"
+									 press="onViewProfile"
 									 header="View My Profile"
 									 headerImage="sap-icon://business-card">
 							<m:TileContent id="ViewProfileFooter" footer="View Profile">
@@ -135,6 +138,7 @@
 					  </m:GenericTile>
 				      <m:GenericTile id="ViewLearning" 
 					                 class="ViewLearning"
+									 press="onViewLearning"
 									 header="View My Learning"
 									 headerImage="sap-icon://education">
 							<m:TileContent id="ViewMyLearningFooter" footer="View Learning">
@@ -148,6 +152,7 @@
 					 <m:HBox id="innerVbox2" class="innerTile">
 				        <m:GenericTile id="ViewOrg" 
 										class="ViewOrg"
+										press="onViewOrg"
 										header="View My Org"
 										headerImage="sap-icon://tree">
 								<m:TileContent id="ViewOrgFooter" footer="View Org">
@@ -159,6 +164,7 @@
 					    </m:GenericTile>
 				        <m:GenericTile id="ViewLeaves" 
 										class="ViewLeaves"
+										press="onViewLeaves"
 										header="View My Leaves"
 										headerImage="sap-icon://calendar">
 								<m:TileContent id="ViewLeavesFooter" footer="View Leaves">
@@ -170,6 +176,7 @@
 					    </m:GenericTile>
 						<m:GenericTile id="ViewReport" 
 										class="ViewReport"
+										press="onViewReport"
 										header="View Tile Report"
 										headerImage="sap-icon://donut-chart">
 								<m:TileContent id="ViewReportFooter" footer="View Report">
@@ -179,7 +186,7 @@
 										<m:Text id="ViewReporttxt" text="View Report Details"/>
 							    </m:TileContent>		 
 					    </m:GenericTile>
-						<m:GenericTile id="ViewReportCenter" 
+						<!-- <m:GenericTile id="ViewReportCenter" 
 										class="ViewReportCenter"
 										header="View Report Center"
 										headerImage="sap-icon://business-objects-experience">
@@ -189,7 +196,7 @@
 										</m:layoutData>
 										<m:Text id="ReportCentertxt" text="View Report Center Details"/>
 							    </m:TileContent>		 
-					    </m:GenericTile>
+					    </m:GenericTile> -->
 						<m:GenericTile id="ViewDocument" 
 										class="ViewDocument"
 										header="View Company Document"
@@ -236,13 +243,13 @@
 				</m:items>
 			</m:Table> -->
 
-			<m:VBox id="OrgText">
+			<!-- <m:VBox id="OrgText">
 			   <m:Title id="OrgTextTitle" text="Organizational Updates" class="OrgText"/>
 			   <m:VBox id="Service">
 			       <m:Title id="EmployeeService" text="Employee Self Service" class="EmployeeService"/>
                </m:VBox>
-			</m:VBox>
+			</m:VBox> -->
 
 		</m:ScrollContainer>
-	</m:Page>
+	<!-- </m:Page> -->
 </mvc:View>

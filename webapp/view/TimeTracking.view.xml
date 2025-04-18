@@ -13,42 +13,66 @@
     <m:Page title="Time Tracking" titleAlignment="Center">
         
         <m:content>
-           
             <layout:VerticalLayout class="TimeLayout" busyIndicatorSize="Large">
-                <m:Label text="Select Date" class="label"/>
-                <m:DatePicker id="dpDate" value="{/TimeTracking/date}" width="100%"/>
-
-                <m:Label text="Start Time" class="label"/>
-                <m:TimePicker id="tpStartTime" value="{/TimeTracking/startTime}" width="100%"/>
-
-                <m:Label text="End Time" class="label"/>
-                <m:TimePicker id="tpEndTime" value="{/TimeTracking/endTime}" width="100%"/>
-
-                <m:Label text="Project/Task" class="label"/>
-                <m:Input id="inputTask" value="{/TimeTracking/task}" width="100%"/>
-
-                <m:Label text="Description" class="label"/>
-                <m:TextArea id="textareaDescription" value="{/TimeTracking/description}" width="100%" rows="3"/>
+                    <m:HBox >
+                        <m:Label text="Select Date: " class="label"/>
+                        <m:DatePicker id="dpDate" value="{/TimeTracking/date}" width="100%" class="dpDate"/>
+                    </m:HBox>
+                    <m:HBox>
+                        <m:Label text="Start Date: " class="label"/>
+                        <m:DatePicker id="tpStartDate" value="{/TimeTracking/startDate}" width="100%" class="tpStartDate"/>
+                    </m:HBox>
+                    <m:HBox>
+                        <m:Label text="End Date: " class="label"/>
+                        <m:DatePicker id="tpEndTime" value="{/TimeTracking/endDate}" width="100%" class="tpEndDate"/>
+                    </m:HBox>
+                    <m:HBox>
+                        <m:Label text="Project/Task: " class="label"/>
+                        <m:Input id="inputTask" value="{/TimeTracking/task}" width="30rem" class="inputTask"/>
+                    </m:HBox>
+                    <m:HBox>
+                        <m:Label text="Description: " class="label"/>
+                        <m:TextArea id="textareaDescription" value="{/TimeTracking/description}" width="50rem" rows="5" class="textareaDescription"/>
+                    </m:HBox>
             </layout:VerticalLayout>
 
             <m:HBox class="formDataBtn">
-                <m:Button text="Submit" press="onSubmit" type="Emphasized"  />
-                <m:Button text="Cancel" press="onCancel" type="Reject" />
+                <m:Button text="Submit" press="onSubmit" type="Emphasized" class="SubmitBtn"/>
+                <m:Button text="Cancel" press="onCancel" type="Reject" class="CancelBtn"/>
             </m:HBox>
 
             <m:Title level="H2" text="Previous Entries" class="timeEntryTitle"/>
-            <table:Table id="timeEntryTable" width="100%" class="timeEntryTable">
-                <table:columns>
-                    <table:Column label="Date"/>
-                    <table:Column label="Task" />
-                    <table:Column label="Start Time" />
-                    <table:Column label="End Time" />
-                    <table:Column label="Duration" />
-                </table:columns>
-            </table:Table>
-
-        </m:content>
-        
+            
+               <m:Table  id="timeEntryTable" 
+                         width="100%" 
+                         class="timeEntryTable"
+                         items="{/aNewArrayEntries}">
+               <m:columns>
+                   <m:Column>
+                      <m:Text text="Date"/>
+                   </m:Column>
+                   <m:Column>
+                      <m:Text text="Project/Task"/>
+                   </m:Column>
+                   <m:Column>
+                      <m:Text text="Start Date"/>
+                   </m:Column>
+                   <m:Column>
+                      <m:Text text="End Date"/>
+                   </m:Column>
+               </m:columns>
+               <m:items >
+                  <m:ColumnListItem>
+                     <m:cells>
+                        <m:Text text="{Date}"/>
+                        <m:Text text="{task}"/>
+                        <m:Text text="{startDate}"/>
+                        <m:Text text="{endDate}"/>
+                     </m:cells>
+                  </m:ColumnListItem>
+               </m:items>
+            </m:Table>
+        </m:content> 
     </m:Page>
 
 </mvc:View>

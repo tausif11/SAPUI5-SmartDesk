@@ -9,7 +9,7 @@
         id="btn1"
 		text="View Profile"
 		icon="sap-icon://business-card"
-		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+		press="onViewProfile1" />
 	<Button
         id="btn2"
 		text="Setting"

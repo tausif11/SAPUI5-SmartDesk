@@ -96,11 +96,61 @@
                         "TargetView1"
                     ]
                 },
+
                 {
                     "name": "TimeTracking",
                     "pattern": "TimeTracking/{Id}",
                     "target": [
                         "TargetTimeTrackingView"
+                    ]
+                },
+                {
+                    "name": "Workflow",
+                    "pattern": "Workflow/{Id}",
+                    "target": [
+                        "TargetWorkflowView"
+                    ]
+                },
+                {
+                    "name": "PayStatement",
+                    "pattern": "PayStatement/{Id}",
+                    "target": [
+                        "TargetPayStatementView"
+                    ]
+                },
+                {
+                    "name": "ViewProfile",
+                    "pattern": "ViewProfile/{Id}",
+                    "target": [
+                        "TargetViewProfileView"
+                    ]
+                },
+                {
+                    "name": "ViewLearning",
+                    "pattern": "ViewLearning/{Id}",
+                    "target": [
+                        "TargetViewLearningView"
+                    ]
+                },
+                {
+                    "name": "ViewOrg",
+                    "pattern": "ViewOrg/{Id}",
+                    "target": [
+                        "TargetViewOrgView"
+                    ]
+                },
+                {
+                    "name": "ViewLeaves",
+                    "pattern": "ViewLeaves/{Id}",
+                    "target": [
+                        "TargetViewLeaves"
+                    ]
+                },
+                {
+                    "name": "ViewTileReport",
+                    "pattern": "ViewTileReport/{Id}",
+                    "target": [
+                        "TargetViewTileReports"
                     ]
                 }
             ],
@@ -111,11 +161,54 @@
                     "id": "View1",
                     "name": "View1"
                 },
+
                 "TargetTimeTrackingView": {
                     "viewType": "XML",
                     "transition": "slide",
                     "id": "TimeTracking",
                     "name": "TimeTracking"
+                },
+                "TargetWorkflowView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "Workflow",
+                    "name": "Workflow"
+                },
+                "TargetPayStatementView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "PayStatement",
+                    "name": "PayStatement"
+                },
+                "TargetViewProfileView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "ViewProfile",
+                    "name": "ViewProfile"
+                },
+                "TargetViewLearningView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "ViewLearning",
+                    "name": "ViewLearning"
+                },
+                "TargetViewOrgView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "ViewOrg",
+                    "name": "ViewOrg"
+                },
+                "TargetViewLeaves": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "ViewLeaves",
+                    "name": "ViewLeaves"
+                },
+                "TargetViewTileReports": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "id": "ViewTileReport",
+                    "name": "ViewTileReport"
                 }
             }
         },

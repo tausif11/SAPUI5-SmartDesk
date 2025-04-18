@@ -1,0 +1,126 @@
+<mvc:View xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:f="sap.f" xmlns:ndc="sap.ndc" xmlns:upload="sap.m.upload" xmlns:uxap="sap.uxap" xmlns:footerbar="sap.ushell.ui.footerbar"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns:sfb="sap.ui.comp.smartfilterbar"
+    xmlns="sap.m"
+    controllerName="northwindui5.northwindui.controller.ViewTileReport">
+    
+    <Page>
+    <f:DynamicPage>
+      <f:title>
+         <f:DynamicPageTitle>
+            <f:heading>   
+               <sfb:SmartFilterBar  id="smartFilterBar"
+                                    entitySet="MainEntitySet"
+                                    enableBasicSearch="true"
+                                    persistencyKey="UniqueAndStablePersistencyKey">
+
+                              <sfb:customData>
+                                  <core:CustomData>
+                                  </core:CustomData>
+                              </sfb:customData>      
+               </sfb:SmartFilterBar>
+                     <!-- <Text text="Report Dashboard" textAlign="Center"/>              -->
+                     
+            </f:heading>
+         </f:DynamicPageTitle>
+      </f:title>
+         <f:content>
+            <f:GridContainer class="sapUiTinyMarginBegin sapUiTinyMarginTop TileGrid">
+            <HBox >
+                <GenericTile
+                    header="My Performance Report"
+                    headerImage="sap-icon://donut-chart">
+                    <TileContent footer="PR">
+                    <layoutData>
+                       <f:GridContainerItemLayoutData rows="2" columns="2"/>
+                    </layoutData>
+                     <Text text="Performance Report"/>
+                    </TileContent>
+                </GenericTile>
+                <SlideTile class="Tile1">
+                   <tiles>
+                      <GenericTile>
+                       <TileContent >
+                          <NewsContent contentText="Wind Map: Monitoring Real-Time and Fore-casted Wind Conditions across the Globe"
+						                     subheader="Today, SAP News"/>
+                       </TileContent>
+                      </GenericTile>
+                   </tiles>
+                </SlideTile>
+                <GenericTile class="Tile2">
+                </GenericTile>
+                </HBox>
+            </f:GridContainer>
+            </f:content>
+       </f:DynamicPage>
+
+     
+  <VBox class="sapUiSmallMargin">
+
+    <Title text="Book Manager (OData CRUD)" level="H2" />
+
+    <!-- === Form Section === -->
+    <form:SimpleForm
+      id="formBook"
+      editable="true"
+      layout="ResponsiveGridLayout"
+      labelSpanL="3"
+      labelSpanM="3"
+      emptySpanL="2"
+      emptySpanM="2"
+      columnsL="2"
+      columnsM="2"
+    >
+
+      <Label text="Book ID" />
+      <Input id="inputID" type="Number" />
+
+      <Label text="Title" />
+      <Input id="inputTitle" />
+
+      <Label text="Author" />
+      <Input id="inputAuthor" />
+
+      <Label text="Stock" />
+      <Input id="inputStock" type="Number" />
+
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Create" type="Emphasized" press=".onCreate" />
+        <Button text="Update" press=".onUpdate" />
+        <Button text="Delete" type="Negative" press=".onDelete" />
+      </Toolbar>
+
+    </form:SimpleForm>
+
+    <!-- === Table Section === -->
+    <Table
+      id="booksTable"
+      items="{bookModel>/books}"
+      mode="SingleSelectMaster"
+      selectionChange=".onSelect"
+    >
+      <columns>
+        <Column><Text text="ID" /></Column>
+        <Column><Text text="Title" /></Column>
+        <Column><Text text="Author" /></Column>
+        <Column><Text text="Stock" /></Column>
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text text="{bookModel>ID}" />
+            <Text text="{bookModel>title}" />
+            <Text text="{bookModel>author}" />
+            <Text text="{bookModel>stock}" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+
+  </VBox>
+
+
+    </Page>
+</mvc:View>
